@@ -23,6 +23,6 @@ public class Seleccion {
 
     private String tecnico;
 
-    @Column(name = "estadios_idEstadios",nullable = false)
+    @Column(name = "estadio_idEstadio",nullable = false)
     private Integer idEstadios;
 }
