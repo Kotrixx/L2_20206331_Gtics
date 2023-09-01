@@ -12,25 +12,21 @@
         <div class="container">
             <h2>Nuevo Transportista</h2>
             <hr/>
-            <form method="post" th:action="@{/jugador/guardar}">
+            <form method="post" th:action="@{/estadio/guardar}">
                 <div class="mb-3">
                     <label for="nombre">Nombre</label>
                     <input name="nombre" type="text" class="form-control" id="nombre">
                 </div>
                 <div class="mb-3">
-                    <label for="edad">Edad</label>
-                    <input name="edad" type="text" class="form-control" id="edad">
-                </div>
-                <div class="mb-3">
-                    <label for="posicion">Posicion</label>
-                    <input name="posicion" type="text" class="form-control" id="posicion">
+                    <label for="provincia">Provincia</label>
+                    <input name="provincia" type="text" class="form-control" id="provincia">
                 </div>
                 <div class="mb-3">
                     <label for="club">Club</label>
                     <input name="club" type="text" class="form-control" id="club">
                 </div>
 
-                <a th:href="@{/jugador/}" class="btn btn-danger">Cancelar</a>
+                <a th:href="@{/estadio/}" class="btn btn-danger">Cancelar</a>
                 <button type="submit" class="btn btn-primary">Registrar</button>
             </form>
         </div>

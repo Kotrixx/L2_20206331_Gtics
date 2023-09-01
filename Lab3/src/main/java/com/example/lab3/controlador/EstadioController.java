@@ -46,7 +46,7 @@ public class EstadioController {
     @PostMapping(value = "/guardar")
     public String nuevoJugador(Model model, Estadio estadio) {
         estadioRepository.save(estadio);
-        return "redirect:estadio/";
+        return "redirect:/estadio";
     }
 
 }
