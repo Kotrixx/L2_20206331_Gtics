@@ -30,12 +30,11 @@
                     <input name="club" type="text" class="form-control" id="club">
                 </div>
                 <div class="mb-3">
-                    <label for="selecciones">Seleccion Nacional</label>
-                    <select id="selecciones">
+                    <label for="idSeleccion">Seleccion Nacional</label>
+                    <select id="idSeleccion" name="idSeleccion">
                         <option th:each="seleccion: ${listaSelecciones}"
                                 th:value="${seleccion.idSeleccion}"
-                                th:text="${seleccion.nombre}">
-                        </option>
+                                th:text="${seleccion.nombre}"></option>
                     </select>
                 </div>
                 <a th:href="@{/jugador/}" class="btn btn-danger">Cancelar</a>

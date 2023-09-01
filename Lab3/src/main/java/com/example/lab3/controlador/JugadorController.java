@@ -50,6 +50,9 @@ public class JugadorController {
 
     @PostMapping(value = "/guardar")
     public String nuevoJugador(Model model, Jugador jugador) {
+        System.out.println("nombre: "+jugador.getNombre());
+        System.out.println("club: "+jugador.getClub());
+        System.out.println(jugador.getIdSeleccion());
         jugadorRepository.save(jugador);
         return "redirect:/jugador";
     }
