@@ -10,22 +10,26 @@
 </head>
 <body>
 <div class="container">
-    <h2>Lista Transportistas</h2>
-    <a class="btn btn-primary mt-4 mb-4" th:href="@{/shipper/new}">Nuevo Transportista</a>
+    <h2>Lista Jugadores</h2>
+    <a class="btn btn-primary mt-4 mb-4" th:href="@{/jugador/new}">Nuevo Jugador</a>
     <table class="table table-sm">
         <tr>
             <th>#</th>
-            <th>Nombre de la compañia</th>
-            <th>Teléfono</th>
-            <th></th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Posicion</th>
+            <th>Club</th>
+            <th>Seleccion</th>
             <th></th>
         </tr>
-        <tr th:each="shipper, info: ${lista}">
+        <tr th:each="jugador, info: ${lista}">
             <td th:text="${info.index + 1}"></td>
-            <td th:text="${shipper.companyname}"></td>
-            <td th:text="${shipper.phone}"></td>
-            <td><a class="btn btn-primary" th:href="@{'/shipper/editar?id=' + ${shipper.shipperId}}">Editar</a></td>
-            <td><a class="btn btn-danger" th:href="@{'/shipper/borrar?id=' + ${shipper.shipperId}}">Borrar</a></td>
+            <td th:text="${jugador.nombre}"></td>
+            <td th:text="${jugador.edad}"></td>
+            <td th:text="${jugador.posicion}"></td>
+            <td th:text="${jugador.club}"></td>
+            <td th:text="${jugador.idSeleccion}"></td>
+            <td><a class="btn btn-danger" th:href="@{'/shipper/borrar?id=' + ${jugador.idJugador}}">Borrar</a></td>
         </tr>
     </table>
 </div>

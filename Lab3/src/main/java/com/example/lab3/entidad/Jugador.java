@@ -28,7 +28,7 @@ public class Jugador {
     @Column(nullable = false)
     private String posicion;
 
-    @Column(name = "estadios_idEstadios",nullable = false)
+    @Column(nullable = false)
     private String club;
 
     @Column(name = "sn_idSeleccion",nullable = false)
